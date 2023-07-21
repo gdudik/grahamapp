@@ -8,23 +8,26 @@ import { Platform } from '@ionic/angular';
   providedIn: 'root'
 })
 export class PhotoService {
-private platform: Platform;
-public async addNewtoGallery() {
-  // Take a photo
-  const capturedPhoto = await Camera.getPhoto({
-    resultType: CameraResultType.Uri,
-    source: CameraSource.Camera,
-    quality: 100
-  })
-}
+  private platform: Platform;
+
   constructor(platform: Platform) { 
     this.platform = platform;
   }
-}
 
-export class GetUSBDevices {
+  public async addNewtoGallery() {
+    // Take a photo
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100
+    })
+  }
+
   public async readDevices() {
     const returnedDevices = await UsbSerial.connectedDevices()
     console.log(returnedDevices)
   }
+
+
 }
+
