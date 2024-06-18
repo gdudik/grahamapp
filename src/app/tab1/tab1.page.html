@@ -12,6 +12,10 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button (click)="logDevices()"> Log Devices </ion-button>
+  <ion-button (click)="openPort()"> Open Port </ion-button>
+  <ion-button (click)="listenForData()"> readdata </ion-button>
+  <ion-button (click)="killListener()"> killlistener </ion-button>
+  <ion-button (click)="sendSample()"> say hello </ion-button>
+  <ion-button (click)="closeSerial()"> close port </ion-button>
 </ion-content>
